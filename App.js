@@ -8,8 +8,8 @@ import {
 } from 'react-native'
 import { useState } from 'react'
 import { Ionicons, Octicons } from '@expo/vector-icons'
-import Characters from './Characters'
-import ProfileView from './ProfileView'
+import Characters from './components/Characters'
+import ProfileView from './components/ProfileView'
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(true)

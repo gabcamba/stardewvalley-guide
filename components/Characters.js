@@ -1,5 +1,5 @@
 import CharacterRow from './CharacterRow'
-import { characters } from './characterCollection'
+import { characters } from '../assets/characterCollection'
 
 export default function Characters(props) {
   return (
