@@ -5,11 +5,13 @@ import {
   ScrollView,
   SafeAreaView,
   TouchableOpacity,
+  StyleSheet,
 } from 'react-native'
 import { useState } from 'react'
 import { Ionicons, Octicons } from '@expo/vector-icons'
 import Characters from './components/Characters'
 import ProfileView from './components/ProfileView'
+import NavBar from './components/NavBar'
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(true)
@@ -21,31 +23,33 @@ export default function App() {
     setSelectedCharacter(character)
   }
   const dM = '#2c2c2c'
+
+  const styles = StyleSheet.create({
+    safeAreaView: { flex: 10, backgroundColor: isDarkMode ? dM : 'white' },
+    headerView: {
+      paddingLeft: 10,
+      flex: 0.7,
+      backgroundColor: isDarkMode ? dM : '#ffffff',
+      zIndex: 1,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    headerText: {
+      fontWeight: 'bold',
+      fontSize: 40,
+      flex: 8,
+      color: isDarkMode ? 'white' : 'black',
+      marginLeft: 5,
+    },
+    darkModeBtn: { flex: 2, justifyContent: 'center', alignItems: 'center' },
+  })
+
   return (
-    <SafeAreaView
-      style={{ flex: 10, backgroundColor: isDarkMode ? dM : 'white' }}
-    >
+    <SafeAreaView style={styles.safeAreaView}>
       <StatusBar style={isDarkMode ? 'light' : 'dark'} />
-      <View
-        style={{
-          paddingLeft: 10,
-          flex: 0.7,
-          backgroundColor: isDarkMode ? dM : '#ffffff',
-          zIndex: 1,
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <Text
-          style={{
-            fontWeight: 'bold',
-            fontSize: 40,
-            flex: 8,
-            color: isDarkMode ? 'white' : 'black',
-            marginLeft: 5,
-          }}
-        >
+      <View style={styles.headerView}>
+        <Text style={styles.headerText}>
           {currentView === 'Profile' ? (
             <View>
               <TouchableOpacity
@@ -61,7 +65,7 @@ export default function App() {
         </Text>
         <TouchableOpacity
           onPress={() => setIsDarkMode(!isDarkMode)}
-          style={{ flex: 2, justifyContent: 'center', alignItems: 'center' }}
+          style={styles.darkModeBtn}
         >
           <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 25 }}>
             {isDarkMode ? (
@@ -88,72 +92,12 @@ export default function App() {
           ) : null}
         </ScrollView>
       </View>
-      <View
-        style={{
-          flex: 0.7,
-          flexDirection: 'row',
-          justifyContent: 'space-around',
-          backgroundColor: isDarkMode ? dM : 'white',
-          borderRadius: 20,
-        }}
-      >
-        <TouchableOpacity
-          onPress={() => setCurrentView('Villagers')}
-          style={{
-            width: '33%',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <View>
-            <Ionicons
-              name='ios-people'
-              size={24}
-              color={
-                currentView === 'Villagers' || currentView === 'Profile'
-                  ? '#006ee6'
-                  : isDarkMode
-                  ? 'white'
-                  : 'black'
-              }
-            />
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          onPress={() => setCurrentView('Locations')}
-          style={{
-            width: '33%',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <View>
-            <Ionicons
-              name='location-sharp'
-              size={22}
-              color={isDarkMode ? 'white' : 'black'}
-            />
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          onPress={() => setCurrentView('Crafting')}
-          style={{
-            width: '33%',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <View>
-            <Octicons
-              name='package'
-              size={22}
-              color={isDarkMode ? 'white' : 'black'}
-            />
-          </View>
-        </TouchableOpacity>
-      </View>
+      <NavBar
+        currentView={currentView}
+        setCurrentView={setCurrentView}
+        dM={dM}
+        isDarkMode={isDarkMode}
+      />
     </SafeAreaView>
   )
 }

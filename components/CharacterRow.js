@@ -17,7 +17,14 @@ export default function CharacterRow(props) {
               uri: rowItem.imgUri,
             }}
           />
-          <Text style={{...styles.name, color: props.darkMode ? 'white' : 'black'}}>{rowItem.name}</Text>
+          <Text
+            style={{
+              ...styles.name,
+              color: props.darkMode ? 'white' : 'black',
+            }}
+          >
+            {rowItem.name}
+          </Text>
         </TouchableOpacity>
       ))}
     </View>
@@ -51,6 +58,6 @@ const styles = StyleSheet.create({
   name: {
     fontWeight: 'bold',
     fontSize: 17,
-    marginTop: 5
-  }
+    marginTop: 5,
+  },
 })
