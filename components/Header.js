@@ -28,6 +28,7 @@ export const Header = ({
       marginLeft: 5,
     },
     darkModeBtn: { flex: 2, justifyContent: 'center', alignItems: 'center' },
+    darkModeBtnIcon: { color: 'white', fontWeight: 'bold', fontSize: 25 },
   })
   return (
     <View style={styles.headerView}>
@@ -49,7 +50,7 @@ export const Header = ({
         onPress={() => setIsDarkMode(!isDarkMode)}
         style={styles.darkModeBtn}
       >
-        <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 25 }}>
+        <Text style={styles.darkModeBtnIcon}>
           {isDarkMode ? (
             <Ionicons name='sunny-outline' size={35} color='white' />
           ) : (

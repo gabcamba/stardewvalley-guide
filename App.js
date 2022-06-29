@@ -30,7 +30,6 @@ export default function App() {
         setProfileView={setProfileView}
         setIsDarkMode={setIsDarkMode}
         selectedCharacter={selectedCharacter}
-        f
         setCurrentView={setCurrentView}
       />
       <CharacterView
