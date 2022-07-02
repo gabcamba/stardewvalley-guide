@@ -6,7 +6,7 @@ export default function CharacterRow(props) {
         <TouchableOpacity
           key={rowItem.name}
           onPress={() => {
-            props.setVillagerProfile(rowItem.name)
+            props.setVillagerProfile(rowItem)
             props.navigation.navigate('Profile')
           }}
           style={{
@@ -42,11 +42,11 @@ const styles = StyleSheet.create({
     height: 100,
     width: 100,
     margin: 10,
-    borderRadius: 5,
+    borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  dark: '#212121',
+  dark: '#161618',
   light: '#f2f2f2',
   imgSize: {
     width: 50,

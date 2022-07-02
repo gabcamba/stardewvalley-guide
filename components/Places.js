@@ -5,7 +5,6 @@ export default function Places({navigation}) {
   return (
     <View>
       <Text>Places</Text>
-      <NavBar navigation={navigation}/>
     </View>
   )
 }

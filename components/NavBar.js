@@ -1,14 +1,9 @@
 import { View, TouchableOpacity, StyleSheet } from 'react-native'
 import { Ionicons, Octicons } from '@expo/vector-icons'
 import { DARK_MODE_COLOR, WHITE_COLOR } from '../colors'
-
-export default function NavBar({
-  isDarkMode,
-  dM,
-  currentView,
-  setCurrentView,
-  navigation
-}) {
+import { useNavigation } from '@react-navigation/native'
+export default function NavBar() {
+  const navigation = useNavigation();
   const styles = StyleSheet.create({
     navView: {
       // flex: 0.7,
