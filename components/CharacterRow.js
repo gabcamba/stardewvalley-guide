@@ -62,5 +62,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 17,
     marginTop: 5,
+    fontFamily: 'VT323'
   },
 })

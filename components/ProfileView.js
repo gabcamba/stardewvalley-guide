@@ -1,7 +1,5 @@
 import { View, Text, ScrollView } from 'react-native'
 import { DARK_MODE_COLOR } from '../colors'
-import Characters from './Characters'
-import NavBar from './NavBar'
 import { useEffect } from 'react'
 import { BlurView } from 'expo-blur'
 

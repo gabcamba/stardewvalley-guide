@@ -7,15 +7,17 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import ProfileView from './components/ProfileView'
 import Places from './components/Places'
 import { DARK_MODE_COLOR, GREEN_COLOR, WHITE_COLOR } from './colors'
-import { View } from 'react-native'
+import { useFonts } from 'expo-font'
+
 const Stack = createNativeStackNavigator()
 
 export default function App({ navigation }) {
   const [isDarkMode, setIsDarkMode] = useState(true)
-  const [currentView, setCurrentView] = useState('Villagers')
   const [selectedVillager, setSelectedVillager] = useState(null)
 
-
+  let [fontsLoaded] = useFonts({
+    'VT323': require('./assets/fonts/munro.ttf'),
+  });
 
   const headerStyle = {
     headerStyle: {
@@ -23,22 +25,28 @@ export default function App({ navigation }) {
     },
     headerTintColor: WHITE_COLOR,
     headerTitleStyle: {
+      fontFamily: 'VT323',
       fontWeight: 'bold',
-      fontSize: 20,
+      fontSize: 25,
       color: 'white'
     },
-    headerTitleAlign: 'left',
-    headerShadowVisible: false
+    headerShadowVisible: false,
+    headerBackTitleStyle: {
+      fontFamily: 'VT323'
+    }
   }
 
   const setVillagerProfile = (villager) => {
     setSelectedVillager(villager)
   }
 
+  if (!fontsLoaded) {
+    return null
+  }
+
   return (
     <NavigationContainer>
-      <StatusBar style={isDarkMode ? 'light' : 'dark'} />
-
+      <StatusBar style={'light'} />
       <Stack.Navigator>
         <Stack.Screen
           name='Villagers'
@@ -50,7 +58,6 @@ export default function App({ navigation }) {
           {(props) => (
             <VillagersView
               {...props}
-              currentView={currentView}
               dM={DARK_MODE_COLOR}
               isDarkMode={isDarkMode}
               setVillagerProfile={setVillagerProfile}
@@ -75,7 +82,6 @@ export default function App({ navigation }) {
           {(props) => (
             <Places
               {...props}
-              currentView={currentView}
               dM={DARK_MODE_COLOR}
               isDarkMode={isDarkMode}
             />
@@ -83,7 +89,6 @@ export default function App({ navigation }) {
         </Stack.Screen>
       </Stack.Navigator>
       <NavBar
-        currentView={currentView}
         dM={DARK_MODE_COLOR}
         isDarkMode={isDarkMode}
       />
