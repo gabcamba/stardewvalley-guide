@@ -2,57 +2,105 @@ export const characters = [
   [
     {
       "name": "Alex",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/0/04/Alex.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/0/04/Alex.png",
+      "birthday": {
+        "season" : "SUMMER",
+        "day" : 13
+      }
     },
     {
       "name": "Elliott",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/b/bd/Elliott.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/b/bd/Elliott.png",
+      "birthday": {
+        "season" : "FALL",
+        "day" : 5
+      }
     },
     {
       "name": "Harvey",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/9/95/Harvey.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/9/95/Harvey.png",
+      "birthday": {
+        "season" : "WINTER",
+        "day" : 14
+      }
     }
   ],
   [
     {
       "name": "Sam",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/9/94/Sam.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/9/94/Sam.png",
+      "birthday": {
+        "season" : "SUMMER",
+        "day" : 17
+      }
     },
     {
       "name": "Sebastian",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/a/a8/Sebastian.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/a/a8/Sebastian.png",
+      "birthday": {
+        "season" : "WINTER",
+        "day" : 7
+      }
     },
     {
       "name": "Shane",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/8/8b/Shane.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/8/8b/Shane.png",
+      "birthday": {
+        "season" : "SPRING",
+        "day" : 20
+      }
     }
   ],
   [
     {
       "name": "Leah",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/e/e6/Leah.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/e/e6/Leah.png",
+      "birthday": {
+        "season" : "WINTER",
+        "day" : 23
+      }
     },
     {
       "name": "Maru",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/f/f8/Maru.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/f/f8/Maru.png",
+      "birthday": {
+        "season" : "SUMMER",
+        "day" : 10
+      }
     },
     {
       "name": "Penny",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/a/ab/Penny.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/a/ab/Penny.png",
+      "birthday": {
+        "season" : "FALL",
+        "day" : 2
+      }
     }
   ],
   [
     {
       "name": "Abigail",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/8/88/Abigail.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/8/88/Abigail.png",
+      "birthday": {
+        "season" : "FALL",
+        "day" : 13
+      }
     },
     {
       "name": "Emily",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/2/28/Emily.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/2/28/Emily.png",
+      "birthday": {
+        "season" : "SPRING",
+        "day" : 27
+      }
     },
     {
       "name": "Haley",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/1/1b/Haley.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/1/1b/Haley.png",
+      "birthday": {
+        "season" : "SPRING",
+        "day" : 13
+      }
     }
   ],
   [
