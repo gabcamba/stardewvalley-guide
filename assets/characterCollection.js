@@ -44,7 +44,7 @@ export const characters = [
   [
     {
       "name": "Abigail",
-      "imgUri" : "https://stardewvalleywiki.com/mediawiki/images/8/88/Abigail.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/8/88/Abigail.png"
     },
     {
       "name": "Emily",
@@ -58,7 +58,7 @@ export const characters = [
   [
     {
       "name": "Caroline",
-      "imgUri" : "https://stardewvalleywiki.com/mediawiki/images/8/87/Caroline.png"
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/8/87/Caroline.png"
     },
     {
       "name": "Clint",
@@ -71,30 +71,138 @@ export const characters = [
   ],
   [
     {
-      "name": "Caroline",
-      "imgUri" : "https://stardewvalleywiki.com/mediawiki/images/8/87/Caroline.png"
+      "name": "Dwarf",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/e/ed/Dwarf.png"
     },
     {
-      "name": "Clint",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/3/31/Clint.png"
+      "name": "Evelyn",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/8/8e/Evelyn.png"
     },
     {
-      "name": "Demetrius",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/f/f9/Demetrius.png"
+      "name": "George",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/7/78/George.png"
     }
   ],
   [
     {
-      "name": "Caroline",
-      "imgUri" : "https://stardewvalleywiki.com/mediawiki/images/8/87/Caroline.png"
+      "name": "Gus",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/5/52/Gus.png"
     },
     {
-      "name": "Clint",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/3/31/Clint.png"
+      "name": "Jas",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/5/55/Jas.png"
     },
     {
-      "name": "Demetrius",
-      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/f/f9/Demetrius.png"
+      "name": "Jodi",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/4/41/Jodi.png"
+    }
+  ],
+  [
+    {
+      "name": "Kent",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/9/99/Kent.png"
+    },
+    {
+      "name": "Krobus",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/7/71/Krobus.png"
+    },
+    {
+      "name": "Leo",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/1/1d/Leo.png"
+    }
+  ],
+  [
+    {
+      "name": "Lewis",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/2/2b/Lewis.png"
+    },
+    {
+      "name": "Linus",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/3/31/Linus.png"
+    },
+    {
+      "name": "Marnie",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/5/52/Marnie.png"
+    }
+  ],
+  [
+    {
+      "name": "Pam",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/d/da/Pam.png"
+    },
+    {
+      "name": "Pierre",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/7/7e/Pierre.png"
+    },
+    {
+      "name": "Robin",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/1/1b/Robin.png"
+    }
+  ],
+  [
+    {
+      "name": "Sandy",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/4/4e/Sandy.png"
+    },
+    {
+      "name": "Vincent",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/f/f1/Vincent.png"
+    },
+    {
+      "name": "Willy",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/8/82/Willy.png"
+    }
+  ],
+  [
+    {
+      "name": "Wizard",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/c/c7/Wizard.png"
+    }, {
+      "name": "Birdie",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/4/46/Birdie.png"
+    },
+    {
+      "name": "Bouncer",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/f/f5/Bouncer.png"
+    }
+  ],
+  [
+    {
+      "name": "Gil",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/6/64/Gil.png"
+    }, {
+      "name": "Governor",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/4/46/Governor.png"
+    },
+    {
+      "name": "Grandpa",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/8/88/Grandpa.png"
+    }
+  ],
+  [
+    {
+      "name": "Gunther",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/3/3d/Gunther.png"
+    }, {
+      "name": "Henchman",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/2/21/Henchman_Portrait_1.png"
+    },
+    {
+      "name": "Marlon",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/3/37/Marlon.png"
+    }
+  ],
+  [
+    {
+      "name": "Morris",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/9/90/Morris.png"
+    }, {
+      "name": "Mr. Qi",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/b/b4/Mr._Qi.png"
+    },
+    {
+      "name": "Professor Snail",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/d/d4/Professor_Snail.png"
     }
   ]
 ]
