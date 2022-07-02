@@ -1,6 +1,6 @@
 import { View, TouchableOpacity, StyleSheet } from 'react-native'
 import { Ionicons, Octicons } from '@expo/vector-icons'
-import { DARK_MODE_COLOR, WHITE_COLOR } from '../colors'
+import { DARK_MODE_COLOR, WHITE_COLOR } from '../constants'
 import { useNavigation } from '@react-navigation/native'
 export default function NavBar() {
   const navigation = useNavigation();

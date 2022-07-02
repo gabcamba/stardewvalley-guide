@@ -6,7 +6,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import ProfileView from './components/ProfileView'
 import Places from './components/Places'
-import { DARK_MODE_COLOR, GREEN_COLOR, WHITE_COLOR } from './colors'
+import { DARK_MODE_COLOR, GREEN_COLOR, WHITE_COLOR } from './constants'
 import { useFonts } from 'expo-font'
 
 const Stack = createNativeStackNavigator()
@@ -32,7 +32,8 @@ export default function App({ navigation }) {
     },
     headerShadowVisible: false,
     headerBackTitleStyle: {
-      fontFamily: 'VT323'
+      fontFamily: 'VT323',
+      fontSize: 22
     }
   }
 
