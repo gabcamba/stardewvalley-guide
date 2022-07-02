@@ -3,6 +3,7 @@ import { DARK_MODE_COLOR } from '../colors'
 import Characters from './Characters'
 import NavBar from './NavBar'
 import { useEffect } from 'react'
+import { BlurView } from 'expo-blur'
 
 export default function ProfileView({ selectedVillager }) {
   useEffect(() => {
@@ -18,10 +19,9 @@ export default function ProfileView({ selectedVillager }) {
         <View style={{ flex: 2, backgroundColor: 'lightblue', height: 100 }}>
           <Text style={{ fontSize: 35, fontWeight: 'bold' }}>Hero</Text>
         </View>
-        <View style={{ flex: 1, backgroundColor: 'skyblue', height: 50 }}>
-          <Text style={{ fontSize: 35, fontWeight: 'bold' }}>Nav</Text>
-
-        </View>
+        <BlurView intensity={100} style={{height: 50, backgroundColor: 'skyblue'}}>
+        <Text style={{ fontSize: 20, fontWeight: 'bold' }}>NAV</Text>
+      </BlurView>
         <View style={{ flex: 10, backgroundColor: 'powderblue' }}>
           <Text style={{ fontSize: 35, fontWeight: 'bold' }}>Content</Text>
           <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Lorem Ipsum</Text>
@@ -81,7 +81,7 @@ export default function ProfileView({ selectedVillager }) {
           <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Lorem Ipsum</Text>
           <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Lorem Ipsum</Text>
 
-  
+
 
         </View>
       </ScrollView>
