@@ -5,7 +5,10 @@ export default function CharacterRow(props) {
       {props.row.map((rowItem) => (
         <TouchableOpacity
           key={rowItem.name}
-          onPress={() => props.setSelectedCharacter(rowItem)}
+          onPress={() => {
+            props.setVillagerProfile(rowItem.name)
+            props.navigation.navigate('Profile')
+          }}
           style={{
             ...styles.characterItem,
             backgroundColor: props.darkMode ? styles.dark : styles.light,

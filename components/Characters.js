@@ -2,11 +2,14 @@ import CharacterRow from './CharacterRow'
 import { characters } from '../assets/characterCollection'
 
 export default function Characters(props) {
-  return characters.map((characterRow) => (
+  return characters.map((characterRow, index) => (
     <CharacterRow
-      setSelectedCharacter={props.setSelectedCharacter}
+      key={index}
+      navigation={props.navigation}
       darkMode={props.darkMode}
       row={characterRow}
+      setVillagerProfile={props.setVillagerProfile}
+
     />
   ))
 }

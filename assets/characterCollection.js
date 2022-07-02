@@ -68,5 +68,33 @@ export const characters = [
       "name": "Demetrius",
       "imgUri": "https://stardewvalleywiki.com/mediawiki/images/f/f9/Demetrius.png"
     }
+  ],
+  [
+    {
+      "name": "Caroline",
+      "imgUri" : "https://stardewvalleywiki.com/mediawiki/images/8/87/Caroline.png"
+    },
+    {
+      "name": "Clint",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/3/31/Clint.png"
+    },
+    {
+      "name": "Demetrius",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/f/f9/Demetrius.png"
+    }
+  ],
+  [
+    {
+      "name": "Caroline",
+      "imgUri" : "https://stardewvalleywiki.com/mediawiki/images/8/87/Caroline.png"
+    },
+    {
+      "name": "Clint",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/3/31/Clint.png"
+    },
+    {
+      "name": "Demetrius",
+      "imgUri": "https://stardewvalleywiki.com/mediawiki/images/f/f9/Demetrius.png"
+    }
   ]
 ]

@@ -1,19 +1,22 @@
 import { View, TouchableOpacity, StyleSheet } from 'react-native'
 import { Ionicons, Octicons } from '@expo/vector-icons'
+import { DARK_MODE_COLOR, WHITE_COLOR } from '../colors'
 
 export default function NavBar({
   isDarkMode,
   dM,
   currentView,
   setCurrentView,
+  navigation
 }) {
   const styles = StyleSheet.create({
     navView: {
-      flex: 0.7,
+      // flex: 0.7,
       flexDirection: 'row',
       justifyContent: 'space-around',
-      backgroundColor: isDarkMode ? dM : 'white',
-      borderRadius: 20,
+      backgroundColor: DARK_MODE_COLOR,
+      // borderRadius: 20,
+      height: 100
     },
     navItem: {
       width: '33%',
@@ -25,46 +28,49 @@ export default function NavBar({
   return (
     <View style={styles.navView}>
       <TouchableOpacity
-        onPress={() => setCurrentView('Villagers')}
+        onPress={() => navigation.reset({
+          index: 0,
+          routes: [{ name: 'Villagers' }],
+        })}
         style={styles.navItem}
       >
         <View>
           <Ionicons
             name='ios-people'
             size={24}
-            color={
-              currentView === 'Villagers' || currentView === 'Profile'
-                ? '#006ee6'
-                : isDarkMode
-                ? 'white'
-                : 'black'
-            }
+            color={WHITE_COLOR}
           />
         </View>
       </TouchableOpacity>
 
       <TouchableOpacity
-        onPress={() => setCurrentView('Locations')}
+        onPress={() => navigation.reset({
+          index: 0,
+          routes: [{ name: 'Places' }],
+        })}
         style={styles.navItem}
       >
         <View>
           <Ionicons
             name='location-sharp'
             size={22}
-            color={isDarkMode ? 'white' : 'black'}
+            color={WHITE_COLOR}
           />
         </View>
       </TouchableOpacity>
 
       <TouchableOpacity
-        onPress={() => setCurrentView('Crafting')}
+        onPress={() => navigation.reset({
+          index: 0,
+          routes: [{ name: 'Villagers' }],
+        })}
         style={styles.navItem}
       >
         <View>
           <Octicons
             name='package'
             size={22}
-            color={isDarkMode ? 'white' : 'black'}
+            color={WHITE_COLOR}
           />
         </View>
       </TouchableOpacity>

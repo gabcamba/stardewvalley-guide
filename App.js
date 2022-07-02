@@ -1,49 +1,87 @@
 import { StatusBar } from 'expo-status-bar'
-import { SafeAreaView, StyleSheet } from 'react-native'
 import { useState } from 'react'
 import NavBar from './components/NavBar'
-import CharacterView from './components/CharacterView'
-import Header from './components/Header'
+import VillagersView from './components/VillagersView'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import ProfileView from './components/ProfileView'
+import Places from './components/Places'
+import { DARK_MODE_COLOR, GREEN_COLOR, WHITE_COLOR } from './colors'
 
-export default function App() {
+const Stack = createNativeStackNavigator()
+
+export default function App({ navigation }) {
   const [isDarkMode, setIsDarkMode] = useState(true)
   const [currentView, setCurrentView] = useState('Villagers')
-  const [selectedCharacter, setSelectedCharacter] = useState(null)
+  const [selectedVillager, setSelectedVillager] = useState(null)
 
-  const setProfileView = (character) => {
-    setCurrentView('Profile')
-    setSelectedCharacter(character)
+
+
+  const headerStyle = {
+    headerStyle: {
+      backgroundColor: DARK_MODE_COLOR,
+    },
+    headerTintColor: WHITE_COLOR,
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      fontSize: 20,
+      color: 'white'
+    },
+    headerTitleAlign: 'left',
+    headerShadowVisible: false
   }
-  const dM = '#2c2c2c'
 
-  const styles = StyleSheet.create({
-    safeAreaView: { flex: 10, backgroundColor: isDarkMode ? dM : 'white' },
-  })
+  const setVillagerProfile = (villager) => {
+    setSelectedVillager(villager)
+  }
 
   return (
-    <SafeAreaView style={styles.safeAreaView}>
+    <NavigationContainer>
       <StatusBar style={isDarkMode ? 'light' : 'dark'} />
-      <Header
-        currentView={currentView}
-        dM={dM}
-        isDarkMode={isDarkMode}
-        setProfileView={setProfileView}
-        setIsDarkMode={setIsDarkMode}
-        selectedCharacter={selectedCharacter}
-        setCurrentView={setCurrentView}
-      />
-      <CharacterView
-        currentView={currentView}
-        dM={dM}
-        isDarkMode={isDarkMode}
-        setProfileView={setProfileView}
-      />
-      <NavBar
-        currentView={currentView}
-        setCurrentView={setCurrentView}
-        dM={dM}
-        isDarkMode={isDarkMode}
-      />
-    </SafeAreaView>
+
+      <Stack.Navigator>
+        <Stack.Screen
+          name='Villagers'
+          options={{
+            title: 'Villagers',
+            ...headerStyle
+          }}
+        >
+          {(props) => (
+            <VillagersView
+              {...props}
+              currentView={currentView}
+              dM={DARK_MODE_COLOR}
+              isDarkMode={isDarkMode}
+              setVillagerProfile={setVillagerProfile}
+            />
+          )}
+        </Stack.Screen>
+        <Stack.Screen name='Profile' options={{
+          ...headerStyle, title: selectedVillager,
+          headerTintColor: GREEN_COLOR
+        }}>
+          {(props) => (
+            <ProfileView
+              {...props}
+            />
+          )}
+        </Stack.Screen>
+        <Stack.Screen name='Places' options={{
+          ...headerStyle, title: 'Places',
+          headerTintColor: GREEN_COLOR, headerLeft: () => null
+        }}>
+          {(props) => (
+            <Places
+              {...props}
+              currentView={currentView}
+              dM={DARK_MODE_COLOR}
+              isDarkMode={isDarkMode}
+            />
+          )}
+        </Stack.Screen>
+      </Stack.Navigator>
+      <NavBar nav={navigation} />
+    </NavigationContainer>
   )
 }
